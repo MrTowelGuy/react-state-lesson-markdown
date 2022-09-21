@@ -7,12 +7,18 @@ function Counter() {
   // const [name, setName] = useState("Jaden");
   // const [health, setHealth] = useState(100);
 
+  // Array Deconstructor
+  const [count, setCount] = useState(0);
+  // const handleClick = ()=>{alert("you clicked")};
+  const add = () => setCount(count + 1);
+  const sub = () => setCount(count - 1);
+
   return (
     <>
-      <span>Current Count: 0</span>
+      <span>Current Count: {count}</span>
       <section>
-        <button>+</button>
-        <button>-</button>
+        <button onClick={add}>+</button>
+        <button onClick={sub}>-</button>
       </section>
     </>
   );
